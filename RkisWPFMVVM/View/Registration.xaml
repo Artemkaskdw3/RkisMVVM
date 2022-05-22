@@ -1,0 +1,31 @@
+﻿<Window x:Class="RkisWPFMVVM.View.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RkisWPFMVVM.View"
+        mc:Ignorable="d"
+        Title="Registration" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Text="Регистрация" FontSize="30" Margin="0,0,0,372"></TextBlock>
+        <StackPanel Margin="140,67,400,42">
+            <TextBlock Text="Name" HorizontalAlignment="Center" FontSize="20"></TextBlock>
+            <TextBlock Text="Sername" HorizontalAlignment="Center" FontSize="20" Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="Last Name" HorizontalAlignment="Center" FontSize="20" Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="Login" HorizontalAlignment="Center" FontSize="20" Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="Password" HorizontalAlignment="Center" FontSize="20" Margin="0,15,0,0"></TextBlock>
+            <TextBlock Text="PhoneNumber" HorizontalAlignment="Center" FontSize="20" Margin="0,15,0,0"></TextBlock>
+            <Button Height="30" Width="100" Content="Назад" Background="AliceBlue" Margin="0,20,0,0" Command="{Binding BackBtn}"></Button>
+        </StackPanel>
+        <StackPanel Margin="405,67,135,42">
+            <TextBox Height="25" Text="{Binding NameText}"></TextBox>
+            <TextBox Height="25" Margin="0,20,0,0" Text="{Binding SernameText}"></TextBox>
+            <TextBox Height="25" Margin="0,20,0,0" Text="{Binding LastNameText}"></TextBox>
+            <TextBox Height="25" Margin="0,15,0,0" Text="{Binding LoginText}"></TextBox>
+            <TextBox Height="25" Margin="0,15,0,0" Text="{Binding PasswordText}"></TextBox>
+            <TextBox Height="25" Margin="0,15,0,0" Text="{Binding PhoneNumberText}"></TextBox>
+            <Button Height="30" Width="100" Content="Регистрация" Background="AliceBlue" Margin="0,20,0,0" Command="{Binding RegistrationBtn}"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="RkisWPFMVVM.View.MainWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RkisWPFMVVM.View"
+        mc:Ignorable="d"
+        Title="MainWin" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid Margin="200,100,200,100">
+        <Border Background="GhostWhite" BorderBrush="Black" BorderThickness="1">
+            <StackPanel>
+                <Grid>
+                    <TextBlock Text="Логин" FontSize="20" Width="60" HorizontalAlignment="Left" Margin="0,70,0,0"/>
+                    <TextBlock Text="Пароль" FontSize="20" HorizontalAlignment="Left" Margin="0,120,0,0"/>
+                    <TextBox Margin="100,25,100,0" Height="20" Name="LoginUser" Text="{Binding LoginUser}"/>
+                    <PasswordBox Margin="100,120,100,0" Height="20" Name="Password"/>
+                </Grid>
+                <Grid Height="84">
+                        <Button Width="100" Height="30" HorizontalAlignment="Left" Margin="70,0,0,0" Content="Вход" Command="{Binding Authorization}" CommandParameter="{Binding ElementName=Password}" />
+                        <Button Width="100" Height="30" HorizontalAlignment="Right" Margin="0,0,70,0" Content="Регистрация" Command="{Binding RegistrationBtn}" />
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Grid>
+    </Grid>
+</Window>

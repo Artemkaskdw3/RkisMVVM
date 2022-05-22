@@ -1,0 +1,37 @@
+﻿<Window x:Class="RkisWPFMVVM.View.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RkisWPFMVVM.View"
+        mc:Ignorable="d"
+        Title="MenuWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel Height="200" VerticalAlignment="Top" Margin="0,0,500,0">
+            <TextBlock Text="Ваш Профиль: " FontSize="20"/>
+            <TextBlock Text="{Binding Name}" FontSize="15" Name="NameUser"/>
+            <TextBlock Text="{Binding Sername}" FontSize = "15" Name ="SernameUser"/>
+            <TextBlock Text="{Binding LastName}" FontSize = "15" Name="LastNameUser"/>
+            <TextBlock Text="{Binding Login}" FontSize = "15" Name="LoginUser"/>
+            <TextBlock Text="{Binding PhoneNumber}" FontSize = "15" Name="PhoneNumber"/>
+            <Button Width="100" Height="30" Margin="50,20,0,0" HorizontalAlignment="Left" Content="Выйти" Background="GhostWhite" Command="{Binding BackBtn}"/>
+
+        </StackPanel>
+        <Grid VerticalAlignment ="Bottom" HorizontalAlignment="Right" Width="400" Height="217" Margin="0,0,0,193">
+            <StackPanel Margin="0,0,200,0">
+                <TextBlock HorizontalAlignment="Left" Text="Список пользователей: " FontSize="15"></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Text="Список доступных задач: " FontSize="15" Margin="0,35,0,0"></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Text="Посмотреть историю задач: " FontSize="15" Margin="0,30,0,0"></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Text="Мои задачи на выполнение: " FontSize="15" Margin="0,25,0,0"></TextBlock>
+            </StackPanel>
+            <StackPanel Margin="200,0,0,0">
+                <Button Width="100" Height="30" Content="Список" Background="GhostWhite" BorderBrush="Navy" Command="{Binding ListOfUsers}" ></Button>
+                <Button Width="100" Height="30" Content="Задачи" Background="GhostWhite" BorderBrush="Navy" Margin="0,20,0,0" Command="{Binding AvailableTask}" ></Button>
+                <Button Width="100" Height="30" Content="История" Background="GhostWhite" BorderBrush="Navy" Margin="0,20,0,0" Command="{Binding HistoryTasks}"></Button>
+                <Button Width="100" Height="30" Content="Задачи" Background="GhostWhite" BorderBrush="Navy" Margin="0,20,0,0" Command="{Binding OwnTaskForComplite}"></Button>
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Window>

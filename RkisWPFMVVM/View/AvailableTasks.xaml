@@ -1,0 +1,35 @@
+﻿<Window x:Class="RkisWPFMVVM.View.AvailableTasks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RkisWPFMVVM.View" xmlns:viewmodel="clr-namespace:RkisWPFMVVM.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:AvailableTasksViewModel}"
+        mc:Ignorable="d"
+        Title="AvailableTasks" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <Button Margin="0,0,0,0" Width="70" Height="25" HorizontalAlignment="Right" Content="Назад" Background="WhiteSmoke" Command="{Binding BackBtnn}"></Button>
+                <TextBlock Text="Доступные задачи: " FontSize="20"></TextBlock>
+                <DataGrid IsReadOnly="True" Name="ListUser" AutoGenerateColumns="False"  ColumnWidth="*" ItemsSource="{Binding ListTasks}" SelectedItem="{Binding SelectedTask}" >
+                    <DataGrid.InputBindings>
+                        <MouseBinding Gesture="LeftDoubleClick" Command="{Binding TakeTask}"></MouseBinding>
+                    </DataGrid.InputBindings>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Имя" Binding="{Binding NameTask}"/>
+                        <DataGridTextColumn Header="Описание" Binding="{Binding Discription}"/>
+                        <DataGridTextColumn Header="Дата Публикация" Binding="{Binding DatePubl}"/>
+                        <DataGridTextColumn Header="Имя кто создал задачу" Binding="{Binding IdUserCreationNavigation.Login}"/>
+                        <DataGridTextColumn Header="Имя кто взял задачу" Binding="{Binding IdUserTakeNavigation.Login}"/>
+                        <DataGridTextColumn Header="Стасут задачи" Binding="{Binding StatusNavigation.NameStatus}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </ScrollViewer>
+        <TextBlock Text="Поиск по логину: " HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"></TextBlock>
+        <TextBox Height="20" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,0,0,0" Name="FindLogin" Text="{Binding LoginTextBlock}"></TextBox>
+        <Button Height="20" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,0,0,0" Content="Поиск" Command="{Binding Search}" ></Button>
+        <Button Height="20" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="390,0,0,0" Content="Обновить" Command="{Binding Update}" ></Button>
+    </Grid>
+</Window>

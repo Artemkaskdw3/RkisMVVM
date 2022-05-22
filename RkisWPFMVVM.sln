@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RkisWPFMVVM", "RkisWPFMVVM\RkisWPFMVVM.csproj", "{C2910436-2A09-4F99-AAA7-67C4E8C5EE6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2910436-2A09-4F99-AAA7-67C4E8C5EE6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2910436-2A09-4F99-AAA7-67C4E8C5EE6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2910436-2A09-4F99-AAA7-67C4E8C5EE6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2910436-2A09-4F99-AAA7-67C4E8C5EE6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BB8DA9D-267E-4114-B0CC-AC94874803F2}
+	EndGlobalSection
+EndGlobal
